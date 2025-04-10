@@ -23,7 +23,7 @@ if(navigator.geolocation) {
     );
 }
 
-const map = L.map("map").setView([0,0], 16);
+const map = L.map("map").setView([0,0], 10);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
 
@@ -40,7 +40,7 @@ socket.on("location",(data)=>{
 
     console.log(latitude,longitude)
 
-    map.setView([latitude,longitude], 16)
+    map.setView([latitude,longitude], 10)
 
     if(markers[id]) {
 
